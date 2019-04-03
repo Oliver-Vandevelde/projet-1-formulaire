@@ -1,6 +1,5 @@
 
 <section class="formulaire">
-<<<<<<< HEAD
     <!-- <div class="container-fluid"> -->
         <!--class="center-block"-->
         <img class="img-fluid mx-auto d-block" src="./assets/img/logoPouletteBlanc.png" alt="logo">
@@ -17,30 +16,13 @@
                 <input name="firstname" maxlength="17" type="text" pattern="[A-Za-z]{3,}" class="form-control" placeholder="Ex : Oliver" required>
                 <!-- prenom le plus long du monde 17 caractere. -->
                 <p class="erreur"><?php echo $firstname_error ?></p>
-=======
-    <img src="./assets/img/logoPoulette.png" alt="logo">
-    <form>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="name"><u>Nom :</u></label>
-                <input type="text" class="form-control" placeholder="Ex : Oliver">
-            </div>
-            <div class="form-group col-md-6">
-                <label for="firstname"><u>Prenom :</u></label>
-                <input type="text" class="form-control" placeholder="Ex : Vandevelde">
->>>>>>> aa3a8b3153a4a688805d0f0b3419d89fac757e3a
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-5">
                 <!-- 3 -->
                 <label for="inputState"><u>Genre :</u></label>
-<<<<<<< HEAD
                 <select name="genre" id="inputState" class="form-control">
-=======
-                <select id="inputState" class="form-control">
-                    <option selected>/</option>
->>>>>>> aa3a8b3153a4a688805d0f0b3419d89fac757e3a
                     <option>Homme</option>
                     <option>Femme</option>
                     <option>Autre</option>
@@ -53,13 +35,8 @@
             </div> -->
             <div class="form-group col-md-6 offset-md-1">
                 <!-- 3 -->
-<<<<<<< HEAD
                 <label for="inputState"><u>Pays :</u></label>
                 <select name="pays" id="inputState" class="form-control">
-=======
-                <label for="inputState"><u>Genre :</u></label>
-                <select id="inputState" class="form-control">
->>>>>>> aa3a8b3153a4a688805d0f0b3419d89fac757e3a
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Albania">Albania</option>
                     <option value="Algeria">Algeria</option>
@@ -303,7 +280,6 @@
             </div>
         </div>
         <div class="form-group">
-<<<<<<< HEAD
             <input type="hidden" name="verification" value=""/>
             <label for="mail"><u>Adresse mail :</u></label>
             <input name="email" type="email" class="form-control" placeholder="Ex : abc@123" required>
@@ -315,30 +291,12 @@
                 <option selected>Conseil</option>
                 <option>Information</option>
                 <option>Autres</option>
-=======
-            <label for="mail"><u>Adresse mail :</u></label>
-            <input type="email" class="form-control" placeholder="Ex : abc@123">
-        </div>
-        <div class="form-group row justify-content-md col-md-5">
-            <label for="inputState"><u>Sujet :</u></label>
-            <select id="inputState" class="form-control">
-                <option selected>autre</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
->>>>>>> aa3a8b3153a4a688805d0f0b3419d89fac757e3a
             </select>
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1"></label>
-<<<<<<< HEAD
             <textarea name="message" class="form-control" placeholder="Ex : BlaBlaBla..." id="exampleFormControlTextarea1" rows="4"></textarea>
         </div>
         <button type="submit"  class="btn offset-md-4 col-md-4 offser-md-4">Envoyer</button>
-=======
-            <textarea class="form-control" placeholder="Ex : BlaBlaBla..." id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn offset-md-4 col-md-4 offser-md-4">Envoyer</button>
->>>>>>> aa3a8b3153a4a688805d0f0b3419d89fac757e3a
     </form>
 </section>
