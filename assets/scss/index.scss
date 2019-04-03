@@ -1,291 +1,528 @@
-                /*nuancier*/
-                
-                $C1:#15c5bd; //Le bleu
-                $C2:#FFF; //Le blanc
-                $C3:#303030; //Le gris foncé
-                /*la police*/
-                
-                @import url(http://fr.allfont.net/allfont.css?fonts=bellota);
-                //  font-family: 'Bellota', arial;
-                @font-face {
-                    font-family: 'bellota';
-                    src: url('../fonts/bellota/Bellota-Regular.otf') format('truetype');
-                    font-weight: normal;
-                    font-style: normal;
-                }
-                /* Structure */
-                
-                body {
-                    background-color: $C3;
-                }
-                
-                header {
-                    border-bottom: 1px solid $C2;
-                    a {
-                        color: $C2;
-                        text-decoration: none;
-                        opacity: 0.5;
-                        transition: 0.1s;
-                        &:hover {
-                            text-decoration: none;
-                            color: $C2;
-                            opacity: 1.0;
-                            text-shadow: $C3 0 0 1px;
-                        }
-                    }
-                    .navigation {
-                        position: fixed;
-                        background-color: $C3;
-                        font-family: 'bellota', arial;
-                        width: 100%;
-                        z-index: 5;
-                    }
-                    h1 {
-                        font-size: 2vw;
-                        top: 0.1%;
-                        right: 0.1%;
-                        position: absolute;
-                        text-align: right;
-                        color: $C2;
-                        font-family: 'bellota', arial;
-                    }
-                }
-                
-                .formulaire {
-                    background-color: #303030;
-                    color: #FFF;
-                    // border-radius:10px;
-                    padding: 0 35%;
-                    margin-bottom: 10%;
-                    u {
-                        text-decoration-color: #15c5bd;
-                    }
-                    .btn {
-                        background-color: #FFF;
-                    }
-                    .btn:hover {
-                        box-shadow: inset 1px 2px 5px #303030;
-                    }
-                    .img-fluid {
-                        max-width: 100%;
-                        height: auto;
-                    }
-                    .erreur {
-                        color: red;
-                    }
-                }
-                
-                .envoi {
-                    padding-top: 100px;
-                    background-color: #303030;
-                    color: #FFF;
-                    padding: 0 35%;
-                    margin-bottom: 15%;
-                    text-align: center;
-                    .img-fluid {
-                        max-width: 100%;
-                        height: auto;
-                    }
-                    u {
-                        text-decoration-color: #15c5bd;
-                        font-size: 2.5vw;
-                    }
-                }
-                
-                section {
-                    margin-top: 5%;
-                    .bgimage {
-                        background-image: url("https://c.pxhere.com/photos/04/52/background_circuits_background_image_computer_design-1348718.jpg!d");
-                        background-size: cover;
-                        filter: blur(2px);
-                        opacity: 0.5;
-                        width: 100%;
-                        height: 100%;
-                        position: absolute;
-                        z-index: 0;
-                    }
-                    .acceuil {
-                        z-index: 2;
-                        left: 25%;
-                        display: -ms-flexbox;
-                        display: -webkit-flex;
-                        display: flex;
-                        -webkit-flex-direction: column;
-                        -ms-flex-direction: column;
-                        flex-direction: column;
-                        -webkit-flex-wrap: wrap;
-                        -ms-flex-wrap: wrap;
-                        flex-wrap: wrap;
-                        -webkit-justify-content: center;
-                        -ms-flex-pack: center;
-                        justify-content: center;
-                        -webkit-align-content: center;
-                        -ms-flex-line-pack: center;
-                        align-content: center;
-                        -webkit-align-items: center;
-                        -ms-flex-align: center;
-                        align-items: center;
-                    }
-                    .logo {
-                        width: 30%;
-                        height: auto;
-                    }
-                    .acceuil-titre {
-                        -webkit-order: 0;
-                        -ms-flex-order: 0;
-                        order: 0;
-                        -webkit-flex: 0 1 auto;
-                        -ms-flex: 0 1 auto;
-                        flex: 0 1 auto;
-                        -webkit-align-self: center;
-                        -ms-flex-item-align: center;
-                        align-self: center;
-                        background: -webkit-radial-gradient($C1 75%, $C3 100%);
-                        background-clip: text;
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        font-size: 4vw;
-                        font-family: 'bellota', arial;
-                    }
-                    .block-info {
-                        background-color: white;
-                        width: 100%;
-                        .illu {
-                            width: 10%;
-                            height: 10%;
-                        }
-                        p {
-                            font-family: 'bellota', arial;
-                            padding: 1%;
-                        }
-                        a {
-                            text-align: right;
-                        }
-                    }
-                    .produits {
-                        article {
-                            width: 99%;
-                            margin-top: 1%;
-                            background-color: $C2;
-                            display: inline-flex;
-                            flex-direction: row;
-                            flex-wrap: wrap;
-                            justify-content: flex-end;
-                            align-content: flex-start;
-                            align-items: flex-start;
-                            border: $C1 solid 1px;
-                            box-shadow: inset $C3 0 0 15px;
-                            p {
-                                margin-bottom: 0;
-                                font-size: 1.2vw;
-                                width: 90%;
-                                padding-right: 1%;
-                                text-align: right;
-                                width: 85%;
-                                order: 1;
-                                flex: 0 1 auto;
-                                align-self: auto;
-                                padding-top: 3%;
-                            }
-                            img {
-                                order: 0;
-                                flex: 0 1 auto;
-                                align-self: auto;
-                                width: 15%;
-                            }
-                            .prix {
-                                color: $C1;
-                                text-align: right;
-                                margin-top: -1%;
-                                margin-right: 1%;
-                                order: 2;
-                                flex: 0 1 auto;
-                                text-align: right;
-                                align-self: auto;
-                            }
-                        }
-                    }
-                    .produits:nth-child(2n+0) {
-                        article {
-                            width: 99%;
-                            margin-top: 1%;
-                            background-color: $C2;
-                            display: inline-flex;
-                            flex-direction: row-reverse;
-                            flex-wrap: wrap;
-                            justify-content: flex-end;
-                            align-content: flex-start;
-                            align-items: flex-start;
-                            border: $C1 solid 1px;
-                            box-shadow: inset $C3 0 0 15px;
-                            float: right;
-                            p {
-                                margin-bottom: 0;
-                                font-size: 1.2vw;
-                                width: 90%;
-                                padding-right: 1%;
-                                text-align: right;
-                                width: 85%;
-                                order: 1;
-                                flex: 0 1 auto;
-                                align-self: auto;
-                                padding-top: 3%;
-                            }
-                            img {
-                                order: 0;
-                                flex: 0 1 auto;
-                                align-self: auto;
-                                width: 15%;
-                            }
-                            .prix {
-                                color: $C1;
-                                text-align: right;
-                                margin-top: -1%;
-                                margin-left: 1%;
-                                order: 2;
-                                flex: 0 1 auto;
-                                text-align: right;
-                                align-self: auto;
-                            }
-                        }
-                    }
-                }
-                
-                footer {
-                    box-shadow: $C2 0 -1px 5px;
-                    background-color: $C3;
-                    z-index: 5;
+/*nuancier*/
+
+$C1:#15c5bd; //Le bleu
+$C2:#FFF; //Le blanc
+$C3:#303030; //Le gris foncé
+
+/*la police*/
+
+@import url(http://fr.allfont.net/allfont.css?fonts=bellota);
+//  font-family: 'Bellota', arial;
+@font-face {
+    font-family: 'bellota';
+    src: url('../fonts/bellota/Bellota-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Structure */
+
+body {
+    background-color: $C3;
+}
+
+header {
+    border-bottom: 1px solid $C2;
+    a {
+        color: $C2;
+        text-decoration: none;
+        transition: 0.1s;
+        &:hover {
+            text-decoration: none;
+            color: $C2;
+            opacity: 1.0;
+            text-shadow: $C3 0 0 1px;
+        }
+    }
+    .navigation {
+        position: fixed;
+        background-color: $C3;
+        font-family: 'bellota', arial;
+        width: 100%;
+        z-index: 5;
+    }
+    h1 {
+        font-size: 2vw;
+        top: 0.1%;
+        right: 0.1%;
+        position: absolute;
+        text-align: right;
+        color: $C2;
+        font-family: 'bellota', arial;
+    }
+    .dropdown {
+        opacity: 0.5;
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+    .navbarDropdownMenuLink {
+        opacity: 0.5;
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+    .dropdown-item {
+        opacity: 0.5;
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
+
+.formulaire {
+    margin-top: 3%;
+    background-color: #303030;
+    color: #FFF;
+    // border-radius:10px;
+    padding: 0 35%;
+    margin-bottom: 10%;
+    u {
+        text-decoration-color: #15c5bd;
+    }
+    .btn {
+        background-color: #FFF;
+    }
+    .btn:hover {
+        box-shadow: inset 1px 2px 5px #303030;
+    }
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+    .erreur {
+        color: red;
+    }
+}
+
+.envoi {
+    margin-top: 3%;
+    padding-top: 100px;
+    background-color: #303030;
+    color: #FFF;
+    padding: 0 35%;
+    margin-bottom: 15%;
+    text-align: center;
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+    u {
+        text-decoration-color: #15c5bd;
+        font-size: 2.5vw;
+    }
+}
+
+section {
+    height: 100%;
+    margin-top: -1%;
+    .bgimage {
+        background-image: url("https://c.pxhere.com/photos/04/52/background_circuits_background_image_computer_design-1348718.jpg!d");
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+    .acceuil {
+        position: absolute;
+        top: 15%;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    .logo {
+        width: 30%;
+        height: auto;
+    }
+    .acceuil-titre {
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+        background: -webkit-radial-gradient($C1 75%, $C3 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 4vw;
+        font-family: 'bellota', arial;
+        padding-bottom: -10%;
+    }
+    .block-info {
+        margin-top: 8%;
+        margin-bottom: 8%;
+        margin-right: auto;
+        margin-left: auto;
+        width: 75%;
+        .profil {
+            width: 25%;
+            float: left;
+            padding: 1%;
+        }
+        p {
+            font-size: 1.5vw;
+            font-family: 'bellota', arial;
+            padding: 1%;
+            color: $C1;
+        }
+        .batiment {
+            width: 25%;
+            float: right;
+            padding: 1%;
+        }
+        .fin {
+            width: 12.5%;
+            position: absolute;
+            top: 5vw;
+            left: 0;
+        }
+    }
+    .produits {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 10%;
+        display: flex;
+        .card {
+            margin-left: 1%;
+            width: 20vw;
+        }
+        .card-title {
+            font-size: 1.1vw;
+            font-weight: bold;
+        }
+        .btn-acheter {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: $C1;
+            font-size: 1.2vw;
+        }
+        p {
+            font-size: 1vw;
+        }
+        .prix {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin-bottom: 0.5vw;
+            margin-left: 0.5vw;
+            width: 8vw;
+            text-align: center;
+        }
+    }
+}
+
+footer {
+    box-shadow: $C2 0 -1px 5px;
+    background-color: $C3;
+    z-index: 5;
+    color: $C2;
+    font-family: 'bellota', arial;
+    padding: 0.5%;
+    position: fixed;
+    bottom: -6%;
+    width: 100%;
+    transition: 0.2s;
+    &:hover {
+        bottom: 0;
+    }
+    .réseaux {
+        position: fixed;
+        width: 100%;
+        position: initial;
+        text-align: center;
+        color: $C2;
+        font-size: 1vw;
+        a {
+            color: $C1;
+            &:not(:nth-child(2)) {
+                margin-left: 5%;
+            }
+            margin-bottom: 1%;
+            i {
+                font-size: 2vw;
+            }
+            &:hover {
+                color: $C2;
+            }
+            &:visited {
+                color: $C1;
+                &:hover {
                     color: $C2;
-                    font-family: 'bellota', arial;
-                    padding: 0.5%;
-                    position: fixed;
-                    bottom: 0;
-                    width: 100%;
-                    .réseaux {
-                        position: fixed;
-                        width: 100%;
-                        position: initial;
-                        text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    body {
+        background-color: $C3;
+    }
+    header {
+        border-bottom: 1px solid $C2;
+        a {
+            color: $C2;
+            text-decoration: none;
+            opacity: 0.5;
+            transition: 0.1s;
+            &:hover {
+                text-decoration: none;
+                color: $C2;
+                opacity: 1.0;
+                text-shadow: $C3 0 0 1px;
+            }
+        }
+        .navigation {
+            position: fixed;
+            background-color: $C3;
+            font-family: 'bellota', arial;
+            width: 100%;
+            z-index: 5;
+        }
+        h1 {
+            font-size: 2vw;
+            top: 0.1%;
+            right: 0.1%;
+            position: absolute;
+            text-align: right;
+            color: $C2;
+            font-family: 'bellota', arial;
+        }
+    }
+    .formulaire {
+        margin-top: 5%;
+        background-color: #303030;
+        color: #FFF;
+        // border-radius:10px;
+        padding: 0 35%;
+        margin-bottom: 10%;
+        u {
+            text-decoration-color: #15c5bd;
+        }
+        .btn {
+            background-color: #FFF;
+        }
+        .btn:hover {
+            box-shadow: inset 1px 2px 5px #303030;
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        .erreur {
+            color: red;
+        }
+    }
+    .envoi {
+        margin-top: 5%;
+        padding-top: 100px;
+        background-color: #303030;
+        color: #FFF;
+        padding: 0 35%;
+        margin-bottom: 15%;
+        text-align: center;
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        u {
+            text-decoration-color: #15c5bd;
+            font-size: 2.5vw;
+        }
+    }
+    section {
+        height: 100%;
+        margin-top: -1%;
+        .bgimage {
+            background-image: url("https://c.pxhere.com/photos/04/52/background_circuits_background_image_computer_design-1348718.jpg!d");
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+        .acceuil {
+            position: absolute;
+            top: 15%;
+            width: 100%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+        .logo {
+            width: 30%;
+            height: auto;
+        }
+        .acceuil-titre {
+            -webkit-order: 0;
+            -ms-flex-order: 0;
+            order: 0;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            -webkit-align-self: center;
+            -ms-flex-item-align: center;
+            align-self: center;
+            background: -webkit-radial-gradient($C1 75%, $C3 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 4vw;
+            font-family: 'bellota', arial;
+            padding-bottom: -10%;
+        }
+        .block-info {
+            margin-top: 12%;
+            margin-bottom: 12%;
+            background-color: white;
+            margin-right: auto;
+            margin-left: auto;
+            width: 75%;
+            .profil {
+                width: 25%;
+                float: left;
+                padding: 1%;
+            }
+            p {
+                font-size: 1.5vw;
+                font-family: 'bellota', arial;
+                padding: 1%;
+            }
+            .batiment {
+                float: right;
+                padding: 1%;
+            }
+            .fin {
+                width: 12.5%;
+                position: absolute;
+                top: 8vw;
+                left: 0;
+            }
+        }
+        .produits {
+            width: 85%;
+            margin-top: 15%;
+            display: flex;
+            .card {
+                margin-left: 1%;
+                width: 40vw;
+            }
+            .card-title {
+                font-size: 1.7vw;
+            }
+            p {
+                font-size: 1.5vw;
+            }
+            .btn-acheter {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                color: $C1;
+                font-size: 1.9vw;
+            }
+        }
+    }
+    footer {
+        box-shadow: $C2 0 -1px 5px;
+        background-color: $C3;
+        z-index: 5;
+        color: $C2;
+        font-family: 'bellota', arial;
+        padding: 0.5%;
+        position: fixed;
+        bottom: -8.5%;
+        width: 100%;
+        transition: 0.2s;
+        &:hover {
+            bottom: 0;
+        }
+        .réseaux {
+            position: fixed;
+            width: 100%;
+            position: initial;
+            text-align: center;
+            color: $C2;
+            font-size: 2vw;
+            a {
+                color: $C1;
+                &:not(:nth-child(2)) {
+                    margin-left: 5%;
+                }
+                margin-bottom: 1%;
+                i {
+                    font-size: 5vw;
+                }
+                &:hover {
+                    color: $C2;
+                }
+                &:visited {
+                    color: $C1;
+                    &:hover {
                         color: $C2;
-                        font-size: 1vw;
-                        a {
-                            color: $C1;
-                            &:not(:nth-child(2)) {
-                                margin-left: 5%;
-                            }
-                            margin-bottom: 1%;
-                            i {
-                                font-size: 2vw;
-                            }
-                            &:hover {
-                                color: $C2;
-                            }
-                            &:visited {
-                                color: $C1;
-                                &:hover {
-                                    color: $C2;
-                                }
-                            }
-                        }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    footer {
+        box-shadow: $C2 0 -1px 5px;
+        background-color: $C3;
+        z-index: 5;
+        color: $C2;
+        font-family: 'bellota', arial;
+        padding: 0.5%;
+        position: fixed;
+        bottom: -7%;
+        width: 100%;
+        transition: 0.2s;
+        &:hover {
+            bottom: 0;
+        }
+        .réseaux {
+            position: fixed;
+            width: 100%;
+            position: initial;
+            text-align: center;
+            color: $C2;
+            font-size: 2vw;
+            a {
+                color: $C1;
+                &:not(:nth-child(2)) {
+                    margin-left: 5%;
+                }
+                margin-bottom: 1%;
+                i {
+                    font-size: 5vw;
+                }
+                &:hover {
+                    color: $C2;
+                }
+                &:visited {
+                    color: $C1;
+                    &:hover {
+                        color: $C2;
+                    }
+                }
+            }
+        }
+    }
+}
